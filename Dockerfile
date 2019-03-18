@@ -3,7 +3,7 @@ FROM maven:3.6.0-amazoncorretto-8 AS build
 ADD . /build
 WORKDIR /build
 
-RUN yum install git wget
+RUN yum -y install git wget
 RUN git clone https://github.com/Stratio/cassandra-lucene-index
 RUN cd cassandra-lucene-index && git checkout 3.11.3.0
 
