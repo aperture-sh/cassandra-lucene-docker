@@ -6,7 +6,7 @@ WORKDIR /build
 RUN git clone https://github.com/Stratio/cassandra-lucene-index
 RUN cd cassandra-lucene-index && git checkout 3.11.3.0
 
-RUN mvn clean package
+RUN cd cassandra-lucene-index && mvn clean package
 
 FROM cassandra:3.11.3
 
