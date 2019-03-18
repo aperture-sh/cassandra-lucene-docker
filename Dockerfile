@@ -1,8 +1,7 @@
 FROM maven AS build
 
 RUN git clone https://github.com/Stratio/cassandra-lucene-index
-RUN cd cassandra-lucene-index
-RUN git checkout 3.11.3.0
+RUN cd cassandra-lucene-index && git checkout 3.11.3.0
 
 WORKDIR ./cassandra-lucene-index
 
