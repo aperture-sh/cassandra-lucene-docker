@@ -11,6 +11,7 @@ RUN cd cassandra-lucene-index && mvn clean package
 
 FROM cassandra:3.11.3
 
+RUN apt-get update
 RUN apt-get -yq install wget
 
 COPY --from=build /build/cassandra-lucene-index/plugin/target/cassandra-lucene-index-plugin-3.11.3.0.jar /usr/share/cassandra/lib/cassandra-lucene-index-plugin-3.11.3.0.ja
