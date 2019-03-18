@@ -1,4 +1,4 @@
-FROM maven:3-jdk-8 AS build
+FROM maven:3.6.0-amazoncorretto-8 AS build
 
 ADD . /build
 WORKDIR /build
