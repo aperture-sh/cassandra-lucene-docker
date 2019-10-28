@@ -6,7 +6,7 @@ ADD . /build
 WORKDIR /build
 
 RUN yum -y install git wget
-RUN git clone https://github.com/marauder-io/cassandra-lucene-index 
+RUN git clone https://github.com/aperture-sh/cassandra-lucene-index 
 RUN cd cassandra-lucene-index && git checkout 3.11.3.0
 
 RUN cd cassandra-lucene-index && mvn clean package
